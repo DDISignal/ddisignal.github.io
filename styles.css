@@ -1,0 +1,184 @@
+/* DDI Signal — calm, logical, restrained */
+
+:root {
+  --text: #0f172a;
+  --muted: #475569;
+  --faint: #64748b;
+  --bg: #ffffff;
+  --line: #e2e8f0;
+  --max: 920px;
+
+  --radius: 14px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.55;
+}
+
+a { color: inherit; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 22px;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+  z-index: 20;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 0;
+  gap: 16px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.brand-mark {
+  width: 34px;
+  height: 34px;
+  border: 2px solid #111827;
+  border-radius: 3px; /* almost square, intentionally */
+  display: inline-block;
+}
+
+.brand-name {
+  font-weight: 500;     /* Regular/Medium only */
+  font-size: 22px;
+  letter-spacing: 0.01em; /* slightly open */
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-link {
+  color: var(--muted);
+  font-size: 14px;
+  letter-spacing: 0.01em;
+}
+
+.hero {
+  padding: 66px 0 24px;
+}
+
+.kicker {
+  margin: 0 0 16px;
+  color: var(--muted);
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.lead {
+  margin: 0 0 18px;
+  font-size: 22px;
+  color: var(--text);
+  max-width: 72ch;
+}
+
+.lead-subtle {
+  margin: 0;
+  color: var(--faint);
+  font-size: 16px;
+}
+
+.section {
+  padding: 34px 0;
+  border-top: 1px solid var(--line);
+}
+
+.section h2 {
+  margin: 0 0 12px;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.section p {
+  margin: 0 0 12px;
+  color: var(--muted);
+  max-width: 78ch;
+}
+
+.section p:last-child { margin-bottom: 0; }
+
+.emphasis {
+  color: var(--text) !important;
+  font-weight: 500;
+}
+
+.principles,
+.bullets {
+  margin: 14px 0 14px;
+  padding-left: 18px;
+  color: var(--muted);
+}
+
+.principles li,
+.bullets li {
+  margin: 6px 0;
+}
+
+.section-cta {
+  padding: 42px 0;
+}
+
+.cta {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 22px;
+}
+
+.cta a { color: var(--text); text-decoration: underline; }
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding: 22px 0 34px;
+}
+
+.footer-inner {
+  display: grid;
+  gap: 8px;
+}
+
+.footer-line {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.footer-legal {
+  margin: 0;
+  color: var(--faint);
+  font-size: 12.5px;
+  line-height: 1.45;
+}
+
+/* Mobile */
+@media (max-width: 560px) {
+  .header-inner { flex-direction: column; align-items: flex-start; }
+  .brand-name { font-size: 20px; }
+  .lead { font-size: 19px; }
+}
